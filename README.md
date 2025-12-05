@@ -12,4 +12,3 @@ Commands
 ```bash
 terraform init
 terraform apply
-Carl Weitzel

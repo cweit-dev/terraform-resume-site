@@ -1,19 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-deploy-time="">
 <head>
-  <meta charset="utf-8">
-  <title>Carl Weitzel</title>
-  <style>
-    body {font-family:system-ui;text-align:center;padding:4rem;background:#f8f9fa;
-    h1font-size:3rem;margin-bottom:0.5rem;
-    pfont-size:1.3rem;color:#444;
-    a{color:#0066cc;
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://weitdev.com/">
+  <meta property="og:title" content="Carl Weitzel | IT Support Engineer | Identity & Access • Networking • Security">
+  <meta property="og:description" content="Serverless Cloud Resume built on AWS (Lambda, DynamoDB), CloudFront, and Cloudflare. View my infrastructure projects and IT experience.">
+  <meta property="og:image" content="https://weitdev.com/assets/profile.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Carl Weitzel | IT Support Engineer | Identity & Access • Networking • Security">
+  <meta name="twitter:description" content="Serverless Cloud Resume built on AWS. View my infrastructure projects.">
+  <meta name="twitter:image" content="https://weitdev.com/assets/profile.jpg">
+  <title>Carl Weitzel | IT Support Engineer | Identity & Access • Networking • Security</title>
+  <meta name="description" content="IT Support Engineer | Identity & Access • Networking • Security. 7+ years Tier 1–2 experience at Apple, Conduent, Verizon. Security+, Network+, Cloud+, ITIL 4, AWS CCP.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand: { 500: '#6366f1', 600: '#4f46e5' }
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <h1>Carl Weitzel</h1>
-  <p>CompTIA Cloud+ certified • Linux & automation focused</p>
-  <p>Seeking Helpdesk / Junior Sysadmin position</p>
-  <p><a href="https://github.com/cweit-dev">github.com/cweit-dev</a></p>
+
+<body class="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-500 font-sans selection:bg-brand-500 selection:text-white">
+  
+  <div class="max-w-5xl mx-auto px-6 py-12 md:py-20">
+
+    <button id="theme-toggle" aria-label="Toggle dark mode"
+            class="fixed top-6 right-6 z-50 p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700 hover:scale-110 transition-transform duration-200">
+      <span class="hidden dark:inline">☀️</span>
+      <span class="inline dark:hidden">🌙</span>
+    </button>
+
+    <header class="flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-8 mb-20 animate-fade-in-up">
+      
+      <div class="text-center md:text-left flex-1">
+        <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
+          <span id="typed">Carl Weitzel</span><span class="text-brand-500 animate-pulse">_</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-brand-600 dark:text-brand-400 font-medium mb-3">
+          IT Support Engineer | Identity & Access • Networking • Security
+        </p>
+
+        <p class="inline-flex items-center gap-2 text-sm font-semibold text-green-700 dark:text-green-400 bg-green-50 dark:bg-green-900/30 border border-green-200 dark:border-green-800 px-3 py-1 rounded-full mb-6">
+          <span class="w-2 h-2 rounded-full bg-green-500"></span>
+          Open to fully remote roles
+        </p>
+        
+        <p class="text-gray-600 dark:text-gray-400 max-w-2xl text-lg leading-relaxed mb-8">
+          7+ years of Tier 1–2 technical support experience, including 5 years at Apple in Austin, Texas. 
+          Proven ability to troubleshoot and resolve complex, multi-faceted issues and expertise in Microsoft and Apple ecosystem troubleshooting, Networking, SaaS, and Cloud based services.
+        </p>
+
+        <div class="flex flex-wrap justify-center md:justify-start gap-3">
+          <a href="mailto:carl@weitdev.com" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium hover:opacity-90 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            Email Me
+          </a>
+          <a href="https://www.linkedin.com/in/carl-weitzel-0446ba26" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/cweit-dev" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 dark:bg-gray-700 text-white rounded-lg font-medium hover:bg-gray-700 dark:hover:bg-gray-600 transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="assets/Carl_Weitzel_Resume.pdf" download="Carl_Weitzel_Resume.pdf" class="inline-flex items-center gap-2 px-4 py-2 bg-brand-600 text-white rounded-lg font-medium hover:bg-brand-500 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            Download Résumé
+          </a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-brand-500 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+        <img src="assets/profile.jpg" alt="Carl Weitzel" 
+             class="relative w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-2xl">
+      </div>
+    </header>
+
+    <main class="space-y-20">
+
+      <section>
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+          <span class="w-8 h-1 bg-brand-500 rounded-full"></span>
+          Technical Arsenal
+        </h2>
+        <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+          <div class="flex flex-wrap gap-2">
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Windows 10/11</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">macOS & iOS</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Linux</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Command Line</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">PowerShell/Bash</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Python</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">HTML, CSS, Javascript</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">JSON, YAML</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Version Control (Git CLI/GUI, GitHub)</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">AWS Cloud</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">TCP/IP & DNS</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">VPN Troubleshooting</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Microsoft 365</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Azure/Active Directory</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">SSO/MFA</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Identity & access management</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Network and Security best practices</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Ticket, chat & remote-session support</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Ticketing Systems</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">ITIL/ITSM</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Incident response</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">Telecommunications</span>
+            <span class="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium hover:bg-brand-50 hover:text-brand-600 dark:hover:bg-gray-700 transition cursor-default">HIPAA Compliance</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+          <span class="w-8 h-1 bg-brand-500 rounded-full"></span>
+          Certifications
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            
+            <div class="p-5 border border-green-200 dark:border-green-900 bg-green-50/50 dark:bg-green-900/20 rounded-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">CompTIA Security+</h3>
+                    </div>
+                    <span class="bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 text-xs font-bold px-2 py-1 rounded">ACTIVE</span>
+                </div>
+                <p class="text-xs text-gray-400 mt-4">Issued: Oct 2026</p>
+            </div>
+
+            <div class="p-5 border border-green-200 dark:border-green-900 bg-green-50/50 dark:bg-green-900/20 rounded-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">CompTIA Network+</h3>
+                        <p class="text-sm text-gray-500 mt-1">N10-009</p>
+                    </div>
+                    <span class="bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 text-xs font-bold px-2 py-1 rounded">ACTIVE</span>
+                </div>
+                <p class="text-xs text-gray-400 mt-4">Issued: Oct 2025</p>
+            </div>
+
+            <div class="p-5 border border-green-200 dark:border-green-900 bg-green-50/50 dark:bg-green-900/20 rounded-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">CompTIA Cloud+</h3>
+                        <p class="text-sm text-gray-500 mt-1">CV0-004</p>
+                    </div>
+                    <span class="bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 text-xs font-bold px-2 py-1 rounded">ACTIVE</span>
+                </div>
+                <p class="text-xs text-gray-400 mt-4">Issued: Jan 2026</p>
+            </div>
+
+            <div class="p-5 border border-green-200 dark:border-green-900 bg-green-50/50 dark:bg-green-900/20 rounded-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">CompTIA A+</h3>
+                        <p class="text-sm text-gray-500 mt-1">Core 1 & 2</p>
+                    </div>
+                    <span class="bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 text-xs font-bold px-2 py-1 rounded">ACTIVE</span>
+                </div>
+                <p class="text-xs text-gray-400 mt-4">Issued: Aug 2025</p>
+            </div>
+
+            <div class="p-5 border border-green-200 dark:border-green-900 bg-green-50/50 dark:bg-green-900/20 rounded-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">AWS Cloud Practitioner</h3>
+                        <p class="text-sm text-gray-500 mt-1">Foundational</p>
+                    </div>
+                    <span class="bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 text-xs font-bold px-2 py-1 rounded">ACTIVE</span>
+                </div>
+                <p class="text-xs text-gray-400 mt-4">Issued: Jul 2025</p>
+            </div>
+
+            <div class="p-5 border border-green-200 dark:border-green-900 bg-green-50/50 dark:bg-green-900/20 rounded-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">ITIL 4 Foundation</h3>
+                    </div>
+                    <span class="bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 text-xs font-bold px-2 py-1 rounded">ACTIVE</span>
+                </div>
+            </div>
+
+            <div class="p-5 border border-green-200 dark:border-green-900 bg-green-50/50 dark:bg-green-900/20 rounded-xl hover:-translate-y-1 transition duration-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">CompTIA IT Operations Specialist (CIOS)</h3>
+                        <p class="text-sm text-gray-500 mt-1">Stackable: A+ &amp; Network+</p>
+                    </div>
+                    <span class="bg-green-100 dark:bg-green-800 text-green-700 dark:text-green-300 text-xs font-bold px-2 py-1 rounded">ACTIVE</span>
+                </div>
+            </div>
+
+            <div class="p-5 border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 rounded-xl opacity-75 hover:opacity-100 transition duration-300">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">LPI Linux Essentials</h3>
+                        <p class="text-sm text-gray-500 mt-1">In Progress</p>
+                    </div>
+                    <span class="bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-bold px-2 py-1 rounded">IN PROGRESS</span>
+                </div>
+                <div class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 mt-4 rounded-full overflow-hidden">
+                    <div class="bg-brand-500 h-full w-2/3"></div>
+                </div>
+            </div>
+
+        </div>
+      </section>
+      
+      <section>
+        <h2 class="text-2xl font-bold mb-8 flex items-center gap-3">
+          <span class="w-8 h-1 bg-brand-500 rounded-full"></span>
+          Professional Experience
+        </h2>
+        
+        <div class="space-y-12 border-l-2 border-gray-200 dark:border-gray-800 ml-3 pl-8 relative">
+
+          <div class="relative">
+            <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white dark:border-gray-950 bg-brand-500"></span>
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Senior Technical Support (Tier 1–2)</h3>
+                <span class="text-sm font-mono text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Jan 2024 – Oct 2024</span>
+            </div>
+            <p class="text-brand-600 dark:text-brand-400 font-medium mb-3">Conduent Business Solutions • Remote</p>
+            <ul class="space-y-2 list-disc list-outside ml-4 text-gray-600 dark:text-gray-400">
+              <li>Achieved 94.02% CSAT across 180+ surveys and 80–90% first-contact resolution.</li>
+              <li>Provided remote Tier 1–2 support for Windows, macOS, mobile, software, hardware, account, and network issues.</li>
+              <li>Handled password resets, account unlocks, VPN/MFA troubleshooting, and escalated validated bugs with clear documentation.</li>
+              <li>Contributed knowledge-base articles that reduced recurring tickets.</li>
+            </ul>
+          </div>
+
+          <div class="relative">
+            <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white dark:border-gray-950 bg-gray-300 dark:bg-gray-700"></span>
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Cardiovascular Telemetry Technician</h3>
+                <span class="text-sm font-mono text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Jun 2023 – Jan 2024</span>
+            </div>
+            <p class="text-brand-600 dark:text-brand-400 font-medium mb-3">HCA Houston Conroe • Onsite</p>
+            <ul class="space-y-2 list-disc list-outside ml-4 text-gray-600 dark:text-gray-400">
+              <li>Monitored real-time telemetry streams under strict uptime and HIPAA requirements.</li>
+              <li>Troubleshot hardware, cabling, and network connectivity issues in a clinical environment.</li>
+            </ul>
+          </div>
+
+          <div class="relative">
+            <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white dark:border-gray-950 bg-gray-300 dark:bg-gray-700"></span>
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Retail Specialist</h3>
+                <span class="text-sm font-mono text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Nov 2022 – Mar 2023</span>
+            </div>
+            <p class="text-brand-600 dark:text-brand-400 font-medium mb-3">Verizon • Onsite</p>
+            <ul class="space-y-2 list-disc list-outside ml-4 text-gray-600 dark:text-gray-400">
+              <li>Diagnosed iOS/Android device and cellular network issues.</li>
+              <li>Configured MDM-style controls, cloud backups, and APN settings for business users.</li>
+            </ul>
+          </div>
+
+          <div class="relative">
+            <span class="absolute -left-[41px] top-1 h-5 w-5 rounded-full border-4 border-white dark:border-gray-950 bg-gray-300 dark:bg-gray-700"></span>
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Apple Support Mentor & Senior Advisor</h3>
+                <span class="text-sm font-mono text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">Jul 2017 – Jul 2022</span>
+            </div>
+            <p class="text-brand-600 dark:text-brand-400 font-medium mb-3">Apple Inc. • Hybrid</p>
+            <ul class="space-y-2 list-disc list-outside ml-4 text-gray-600 dark:text-gray-400">
+              <li>Progressed from Tier 1 → Tier 2 → Mentor for macOS, iOS, networking, iCloud, and ecosystem services.</li>
+              <li>Handled complex escalations, Wi-Fi/Bluetooth/VPN diagnostics, Apple ID recovery, and remote diagnostics.</li>
+              <li>Demonstrated deep knowledge of Apple technical ecosystems, including networking and DNS configuration, Cloud services and custom domain name features, OS and Account recovery, device provisioning, backup and file system troubleshooting.</li>
+              <li>Mentored new and transitioning advisors on troubleshooting workflows and de-escalation by providing real-time coaching, shadowing, and performance feedback to improve performance and customer satisfaction.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+          <span class="w-8 h-1 bg-brand-500 rounded-full"></span>
+          Projects
+        </h2>
+        <div class="bg-white dark:bg-gray-900 p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-800">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">How this site works</h3>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                A serverless personal site on AWS: static files on S3, delivered through CloudFront, with Terraform-managed infrastructure and automatic deploys from GitHub Actions.
+              </p>
+            </div>
+            <a href="https://github.com/cweit-dev/terraform-resume-site" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 shrink-0 px-4 py-2 bg-gray-900 dark:bg-gray-700 text-white rounded-lg font-medium hover:opacity-90 transition">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+
+          <div class="arch-diagram mt-6 space-y-5">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">Content delivery</p>
+              <div class="flex flex-wrap items-center gap-2">
+                <div class="arch-box">Visitor</div>
+                <span class="arch-arrow" aria-hidden="true">→</span>
+                <div class="arch-box">Cloudflare</div>
+                <span class="arch-arrow" aria-hidden="true">→</span>
+                <div class="arch-box">CloudFront</div>
+                <span class="arch-arrow" aria-hidden="true">→</span>
+                <div class="arch-box">S3 static site</div>
+              </div>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">Visitor counter</p>
+              <div class="flex flex-wrap items-center gap-2">
+                <div class="arch-box">Browser JS</div>
+                <span class="arch-arrow" aria-hidden="true">→</span>
+                <div class="arch-box">API Gateway</div>
+              </div>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-2">Deploy &amp; infrastructure</p>
+              <div class="flex flex-wrap items-center gap-2 mb-2">
+                <div class="arch-box">GitHub Actions</div>
+                <span class="arch-arrow" aria-hidden="true">→</span>
+                <div class="arch-box">S3 sync + CloudFront invalidation</div>
+              </div>
+              <div class="flex flex-wrap items-center gap-2">
+                <div class="arch-box">Terraform</div>
+                <span class="arch-arrow" aria-hidden="true">→</span>
+                <div class="arch-box">S3 + CloudFront infra</div>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-4 leading-relaxed">
+            The live page calls an API Gateway visitor-count endpoint (verified). This repository’s Terraform defines the S3 bucket and CloudFront distribution only. Lambda and DynamoDB are mentioned in the live site’s metadata but are not defined in this repo.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-3">
+            <span class="w-8 h-1 bg-brand-500 rounded-full"></span>
+            Education
+        </h2>
+        <div class="bg-gray-100 dark:bg-gray-900 p-6 rounded-xl flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h3 class="text-lg font-bold">Western Governors University</h3>
+                <p class="text-gray-600 dark:text-gray-400">B.S. Cloud Computing (AWS track)</p>
+            </div>
+            <div class="mt-4 md:mt-0 px-4 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+                <span class="font-mono text-sm">Nov 2024 – Expected 2027</span>
+            </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="mt-24 pt-8 border-t border-gray-200 dark:border-gray-800 text-center text-sm text-gray-500">
+      
+      <p>© 2026 Carl Weitzel. Built with Terraform, AWS S3 &amp; CloudFront. Source on <a href="https://github.com/cweit-dev/terraform-resume-site" target="_blank" rel="noopener noreferrer" class="underline hover:text-brand-600 transition">GitHub</a>.</p>
+      
+      <p class="mt-2 text-xs">Last deployed: <span id="deploy-time" class="font-mono"></span> UTC</p>
+      <p class="mt-2 text-xs">Visitor Count: <span id="visitor-count" class="font-mono font-bold text-brand-600 dark:text-brand-400">Loading...</span></p>
+    </footer>
+  </div>
+
+  <script src="assets/script.js" defer></script>
 </body>
 </html>
